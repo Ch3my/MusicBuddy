@@ -1,20 +1,15 @@
 import { Slot, Stack, Tabs } from "expo-router";
 import { StyleSheet, View, useColorScheme } from 'react-native';
 import {
-    PaperProvider, MD3LightTheme,
-    MD3DarkTheme, Button, Text,
-    Appbar
+    PaperProvider
 } from 'react-native-paper';
 import {
-    ThemeProvider,
-    DarkTheme,
-    DefaultTheme,
-    useTheme,
+    ThemeProvider
 } from "@react-navigation/native";
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { MusicBuddyThemeProvider, MusicBuddyThemeContext } from './MusicBuddyThemeContext';
 
 // Se crea un Stack que renderiza Tabs
 // las cosas que esten fuera de Tabs se iran a un nuevo Stack
@@ -24,26 +19,10 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 //https://www.youtube.com/watch?v=4-shpLyYBLc&t=448s
 
 const StackLayout = () => {
-    const systemColorScheme = useColorScheme();
-    const [themeName, setThemeName] = useState(systemColorScheme === "dark" ? "dark" : "light");
-    const [theme, setTheme] = useState(themeName === 'dark' ? MD3DarkTheme : MD3LightTheme);
-    const [navTheme, setNavTheme] = useState(themeName === 'dark' ? DarkTheme : DefaultTheme);
-
-    const toggleTheme = () => {
-        setTheme((prevTheme) =>
-            prevTheme === MD3DarkTheme ? MD3LightTheme : MD3DarkTheme
-        );
-        setNavTheme((prevTheme) =>
-            prevTheme === DarkTheme ? DefaultTheme : DarkTheme
-        )
-        setThemeName((prevTheme) =>
-            prevTheme == "dark" ? "light" : "dark"
-        )
-    };
-
+    const { paperTheme, navTheme, themeName } = useContext(MusicBuddyThemeContext);
     return (
         <ThemeProvider value={navTheme}>
-            <PaperProvider theme={theme}>
+            <PaperProvider theme={paperTheme}>
                 <StatusBar style={themeName ? "light" : "dark"} />
                 <Stack>
                     <Stack.Screen name="(tabs)" options={{ headerShown: false }}></Stack.Screen>
@@ -53,4 +32,15 @@ const StackLayout = () => {
     )
 }
 
-export default StackLayout
+// Fue necesario crear un componente que contuviera al StackLayout para que StackLayout
+// leyera correctamente el contexto (sino tenia un contexto con variables tal como se inicalizaron
+// y no cambiaban al ejecutar toggleTheme)
+const App: React.FC = () => {
+    return (
+        <MusicBuddyThemeProvider>
+            <StackLayout />
+        </MusicBuddyThemeProvider>
+    );
+};
+
+export default App;

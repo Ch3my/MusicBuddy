@@ -17,25 +17,27 @@ export default function Home() {
     });
 
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <View style={{ flex: 1 }}>
             <Appbar.Header>
                 <Appbar.Content title="MusicBuddy" titleStyle={{ fontWeight: "bold" }} />
                 <Appbar.Action icon="theme-light-dark" />
             </Appbar.Header>
-            <List.Section>
-                <List.Subheader>Temas</List.Subheader>
-                <Link href="/notes/chords-variations">
-                    <List.Item
-                        title="Variaciones de Acordes"
-                        left={() => <List.Icon color={theme.colors.primary} icon="folder" />} />
-                </Link>
-                <Link href="/notes/harmony">
-                    <List.Item
-                        title="Armonías"
-                        left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
-                    />
-                </Link>
-            </List.Section>
-        </ScrollView>
+            <ScrollView contentContainerStyle={styles.container}>
+                <List.Section>
+                    <List.Subheader>Temas</List.Subheader>
+                    <Link href="/notes/chords-variations">
+                        <List.Item
+                            title="Variaciones de Acordes"
+                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />} />
+                    </Link>
+                    <Link href="/notes/harmony">
+                        <List.Item
+                            title="Armonías"
+                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                        />
+                    </Link>
+                </List.Section>
+            </ScrollView>
+        </View>
     );
 }

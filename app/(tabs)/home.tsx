@@ -1,13 +1,17 @@
 import { StyleSheet, View, ScrollView } from 'react-native';
 import { useTheme, Text, Appbar } from 'react-native-paper';
 import { Picker } from '@react-native-picker/picker';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Scales, Harmonization } from "../../scales"
+import { MusicBuddyThemeProvider, MusicBuddyThemeContext } from '../MusicBuddyThemeContext';
 
 export default function App() {
     const theme = useTheme();
     const [selectedScale, setSelectedScale] = useState(Scales[0].name);
     const selectedScaleObj = Scales.find((scale) => scale.name === selectedScale);
+
+    const { toggleTheme } = useContext(MusicBuddyThemeContext);
+
 
     const handleScaleChange = (scale: React.SetStateAction<string>) => {
         setSelectedScale(scale);
@@ -44,7 +48,7 @@ export default function App() {
         <View style={{ flex: 1 }}>
             <Appbar.Header>
                 <Appbar.Content title="MusicBuddy" titleStyle={{ fontWeight: "bold" }} />
-                <Appbar.Action icon="theme-light-dark" />
+                <Appbar.Action icon="theme-light-dark" onPress={toggleTheme}/>
             </Appbar.Header>
             <ScrollView contentContainerStyle={styles.container}>
                 <Picker
