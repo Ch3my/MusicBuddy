@@ -19,7 +19,7 @@ export default function App() {
 
     const styles = StyleSheet.create({
         container: {
-            flex: 1,
+            flex: 1, // NOTA. Quitar Flex si quieres Scroll
             backgroundColor: theme.colors.background,
             alignItems: 'center',
             justifyContent: 'center',

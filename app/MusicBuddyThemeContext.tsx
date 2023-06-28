@@ -45,10 +45,7 @@ export const MusicBuddyThemeProvider: React.FC<MusicBuddyThemeProviderProps> = (
   );
 
   const toggleTheme = () => {
-    console.log("HOLO")
-    console.log(themeName)
     const newThemeName = themeName == 'dark' ? 'light' : 'dark';
-    console.log(newThemeName)
     setThemeName(newThemeName);
     setPaperTheme(newThemeName == 'dark' ? MD3DarkTheme : MD3LightTheme); // Updated variable name
     setNavTheme(newThemeName == 'dark' ? DarkTheme : DefaultTheme);

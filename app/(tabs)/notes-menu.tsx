@@ -36,6 +36,12 @@ export default function Home() {
                             left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
                         />
                     </Link>
+                    <Link href="/notes/ten-cp-ten-emo">
+                    <List.Item
+                            title="10 Progresiones 10 Emociones"
+                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                        />
+                    </Link>
                 </List.Section>
             </ScrollView>
         </View>

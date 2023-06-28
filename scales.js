@@ -2,7 +2,7 @@ export const Scales = [
     {
         name: 'C',
         major: ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
-        minor: ['C', 'D', 'D#', 'F', 'G', 'G#', 'A#'],
+        minor: ['C', 'D', 'D#', 'F', 'G', 'A♭', 'B♭'],
         relativaMenor: "Am"
     },
     {
