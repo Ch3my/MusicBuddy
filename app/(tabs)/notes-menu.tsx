@@ -8,7 +8,7 @@ export default function Home() {
 
     const styles = StyleSheet.create({
         container: {
-            flex: 1,
+            // flex: 1,
             backgroundColor: theme.colors.background,
             padding: 10
             // alignItems: 'center',
@@ -39,6 +39,18 @@ export default function Home() {
                     <Link href="/notes/ten-cp-ten-emo">
                     <List.Item
                             title="10 Progresiones 10 Emociones"
+                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                        />
+                    </Link>
+                    <Link href="/notes/chords-family">
+                    <List.Item
+                            title="Familia de Acordes"
+                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                        />
+                    </Link>
+                    <Link href="/notes/chord-progresion-1">
+                    <List.Item
+                            title="Progresiones 1"
                             left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
                         />
                     </Link>
