@@ -28,30 +28,36 @@ export default function Home() {
                     <Link href="/notes/chords-variations">
                         <List.Item
                             title="Variaciones de Acordes"
-                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />} />
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />} />
                     </Link>
                     <Link href="/notes/harmony">
                         <List.Item
                             title="Armonías"
-                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
                     <Link href="/notes/ten-cp-ten-emo">
-                    <List.Item
+                        <List.Item
                             title="10 Progresiones 10 Emociones"
-                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
                     <Link href="/notes/chords-family">
-                    <List.Item
+                        <List.Item
                             title="Familia de Acordes"
-                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
                     <Link href="/notes/chord-progresion-1">
-                    <List.Item
+                        <List.Item
                             title="Progresiones 1"
-                            left={() => <List.Icon color={theme.colors.primary} icon="folder" />}
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
+                        />
+                    </Link>
+                    <Link href="/notes/modos-griegos">
+                        <List.Item
+                            title="Modos Griegos"
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
                 </List.Section>

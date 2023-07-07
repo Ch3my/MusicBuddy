@@ -20,7 +20,7 @@ export default function TenChordsProgressionsTenEmotions() {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <Stack.Screen options={{ headerTitle: "10 Progresiones 10 Emociones" }} />
-            <Text theme={theme} variant="headlineSmall" >Edificante, Feliz Euforico</Text>
+            <Text theme={theme} variant="titleLarge" >Edificante, Feliz Euforico</Text>
             <Text theme={theme} variant="titleMedium" >
                 V - VI - VII - I
             </Text>
@@ -34,7 +34,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 A#m, B, C#, D#m
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Serio y profundo</Text>
+            <Text theme={theme} variant="titleLarge" >Serio y profundo</Text>
             <Text theme={theme} variant="titleMedium" >
                 VI - VII - I - VII
             </Text>
@@ -52,7 +52,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 G, A, Bm, A
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Tenso y suspenso</Text>
+            <Text theme={theme} variant="titleLarge" >Tenso y suspenso</Text>
             <Text theme={theme} variant="titleMedium" >
                 I
             </Text>
@@ -64,7 +64,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 (algun instrumento grave) para añader sentido
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Super Sad</Text>
+            <Text theme={theme} variant="titleLarge" >Super Sad</Text>
             <Text theme={theme} variant="titleMedium" >
                 I - VII - IV - VI
             </Text>
@@ -77,7 +77,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 Gm, F, Cm, E♭
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Feel Good</Text>
+            <Text theme={theme} variant="titleLarge" >Feel Good</Text>
             <Text theme={theme} variant="titleMedium" >
                 VI - III - VII - I
             </Text>
@@ -90,7 +90,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 G, D, A, Bm
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Feel Good, but sad</Text>
+            <Text theme={theme} variant="titleLarge" >Feel Good, but sad</Text>
             <Text theme={theme} variant="titleMedium" >
                 VI - I - VII - V
             </Text>
@@ -99,7 +99,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 E, G#m, F#, D#m
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Pump Up (Animado, Gym)</Text>
+            <Text theme={theme} variant="titleLarge" >Pump Up (Animado, Gym)</Text>
             <Text theme={theme} variant="titleMedium" >
                 I - VI - IV
             </Text>
@@ -112,7 +112,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 Gm, E♭, Cm
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Pump Up, pero Happy</Text>
+            <Text theme={theme} variant="titleLarge" >Pump Up, pero Happy</Text>
             <Text theme={theme} variant="titleMedium" >
                 I - III- VI
             </Text>
@@ -125,7 +125,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 Gm, B♭, E♭
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Netflix and Chill</Text>
+            <Text theme={theme} variant="titleLarge" >Netflix and Chill</Text>
             <Text theme={theme} variant="titleMedium" >
                 VI - I - VII
             </Text>
@@ -140,7 +140,7 @@ export default function TenChordsProgressionsTenEmotions() {
                 G# Cm, B♭
             </Text>
             {/* ======= */}
-            <Text theme={theme} variant="headlineSmall" >Just Happy</Text>
+            <Text theme={theme} variant="titleLarge" >Just Happy</Text>
             <Text theme={theme} variant="titleMedium" >
                 IV - V - I
             </Text>
