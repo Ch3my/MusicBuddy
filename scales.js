@@ -8,7 +8,8 @@ export const Scales = [
         lidio: ["C", "D", "E", "F#", "G", "A", "B"],
         mixolidio: ["C", "D", "E", "F", "G", "A", "B♭"],
         locrio: ["C", "D♭", "E♭", "F", "G♭", "A♭", "B♭"],
-        relativaMenor: "Am"
+        relativaMenor: "Am",
+        armaduraSrc: require("./assets/armaduras/C-Am.jpg")
     },
     {
         name: 'C#',
@@ -19,7 +20,8 @@ export const Scales = [
         lidio: ['C#', 'D#', 'F', 'G', 'G#', 'A#', 'C'],
         mixolidio: ['C#', 'D#', 'F', 'F#', 'G#', 'A#', 'B'],
         locrio: ['C#', 'D', 'E', 'F#', 'G', 'A', 'B'],
-        relativaMenor: 'A#m'
+        relativaMenor: 'A#m',
+        armaduraSrc: require("./assets/armaduras/Csharp.jpg")
     },
     {
         name: 'D',
@@ -30,7 +32,8 @@ export const Scales = [
         lidio: ['D', 'E', 'F#', 'G#', 'A', 'B', 'C#'],
         mixolidio: ['D', 'E', 'F#', 'G', 'A', 'B', 'C'],
         locrio: ['D', 'D#', 'F', 'G', 'G#', 'A#', 'C'],
-        relativaMenor: "Bm"
+        relativaMenor: "Bm",
+        armaduraSrc: require("./assets/armaduras/D-Bm.jpg")
     },
     {
         name: 'D#',
@@ -41,7 +44,8 @@ export const Scales = [
         lidio: ['D#', 'F', 'G', 'A', 'A#', 'C', 'D'],
         mixolidio: ['D#', 'F', 'G', 'G#', 'A#', 'C', 'C#'],
         locrio: ['D#', 'E', 'F#', 'G', 'A', 'B', 'C#'],
-        relativaMenor: "Cm"
+        relativaMenor: "Cm",
+        armaduraSrc: require("./assets/armaduras/Dsharp.jpg")
     },
     {
         name: 'E',
@@ -52,7 +56,8 @@ export const Scales = [
         lidio: ['E', 'F#', 'G#', 'A#', 'B', 'C#', 'D#'],
         mixolidio: ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D'],
         locrio: ['E', 'F', 'G', 'A', 'B♭', 'C', 'D'],
-        relativaMenor: "C#m"
+        relativaMenor: "C#m",
+        armaduraSrc: require("./assets/armaduras/E-Csharp-minor.jpg")
     },
     {
         name: 'F',
@@ -63,7 +68,8 @@ export const Scales = [
         lidio: ['F', 'G', 'A', 'B', 'C', 'D', 'E'],
         mixolidio: ['F', 'G', 'A', 'A#', 'C', 'D', 'D#'],
         locrio: ['F', 'F#', 'G#', 'A', 'A#', 'C#', 'D#'],
-        relativaMenor: "Dm"
+        relativaMenor: "Dm",
+        armaduraSrc: require("./assets/armaduras/F.jpg")
     },
     {
         name: 'F#',
@@ -74,7 +80,8 @@ export const Scales = [
         lidio: ['F#', 'G#', 'A#', 'C', 'C#', 'D#', 'F'],
         mixolidio: ['F#', 'G#', 'A#', 'B', 'C#', 'D#', 'E'],
         locrio: ['F#', 'G', 'A', 'B', 'C', 'D', 'E'],
-        relativaMenor: "D#m"
+        relativaMenor: "D#m",
+        armaduraSrc: require("./assets/armaduras/Fsharp.jpg")
     },
     {
         name: 'G',
@@ -85,7 +92,8 @@ export const Scales = [
         lidio: ['G', 'A', 'B', 'C#', 'D', 'E', 'F#'],
         mixolidio: ['G', 'A', 'B', 'C', 'D', 'E', 'F'],
         locrio: ['G', 'G#', 'A#', 'C', 'C#', 'D#', 'F'],
-        relativaMenor: "Em"
+        relativaMenor: "Em",
+        armaduraSrc: require("./assets/armaduras/G-Em.jpg")
     },
     {
         name: 'G#',
@@ -96,7 +104,8 @@ export const Scales = [
         lidio: ['G#', 'A#', 'C', 'D', 'D#', 'F', 'G'],
         mixolidio: ['G#', 'A#', 'C', 'C#', 'D#', 'F', 'F#'],
         locrio: ['G#', 'A', 'B', 'C', 'C#', 'D#', 'F#'],
-        relativaMenor: "Fm"
+        relativaMenor: "Fm",
+        armaduraSrc: require("./assets/armaduras/Gsharp.jpg")
     },
     {
         name: 'A',
@@ -107,7 +116,8 @@ export const Scales = [
         lidio: ['A', 'B', 'C#', 'D#', 'E', 'F#', 'G#'],
         mixolidio: ['A', 'B', 'C#', 'D', 'E', 'F#', 'G'],
         locrio: ['A', 'A#', 'C', 'D', 'D#', 'F', 'G'],
-        relativaMenor: "F#m"
+        relativaMenor: "F#m",
+        armaduraSrc: require("./assets/armaduras/A-Fsharp-minor.jpg")
     },
     {
         name: 'A#',
@@ -118,7 +128,8 @@ export const Scales = [
         lidio: ['A#', 'C', 'D', 'E', 'F', 'G', 'A'],
         mixolidio: ['A#', 'C', 'D', 'D#', 'F', 'G', 'G#'],
         locrio: ['A#', 'B', 'C#', 'D', 'D#', 'F#', 'G#'],
-        relativaMenor: "Gm"
+        relativaMenor: "Gm",
+        armaduraSrc: require("./assets/armaduras/Asharp.jpg")
     },
     {
         name: 'B',
@@ -129,7 +140,8 @@ export const Scales = [
         lidio: ['B', 'C#', 'D#', 'F', 'F#', 'G#', 'A#'],
         mixolidio: ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A'],
         locrio: ['B', 'C', 'D', 'E', 'F', 'G', 'A'],
-        relativaMenor: "G#m"
+        relativaMenor: "G#m",
+        armaduraSrc: require("./assets/armaduras/B.jpg")
     },
 ];
 

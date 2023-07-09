@@ -30,6 +30,32 @@ export default function ChordsVariations() {
                 Un acorde disminuido se compone de la tónica, la iii (3 menor) y la V♭ (quita disminuida)
                 en una escala de B seria B, D, F.
             </Text>
+            <Text theme={theme} variant="bodyLarge">
+                En general los acordes disminuidos son disonantes y tensos. Por si solos quizas no sean
+                muy utiles. Pero la tension de los acordes disminuidos injectan energia en la progresion cuando
+                se analizan en contexto.
+            </Text>
+            <Text theme={theme} variant="bodyLarge">
+                Muchas veces los acordes disminuidos no forman parte de la escala (no diatonicos). Aunque tambien
+                puedes usar algun acorde que este en la escala.
+            </Text>
+            <Text theme={theme} variant="bodyLarge">
+                Es comun que se usen acordes disminuidos en el V# (5#) grado de la escala. Otro grado comun
+                es el IV# (4#). Por ejemplo podrias hacer una progresion V - V#dim - I, pasar por el disminuido
+                ayuda a hacer transiciones mas suaves.
+            </Text>
+            <Text theme={theme} variant="bodyLarge">
+                Aunque tambien se pueden utilizar acordes disminuidos en los acordes de la escala, por ejemplo en el
+                segundo grado
+            </Text>
+            <Text theme={theme} variant="bodyLarge">
+                Se pueden obviar totalmente los acordes disminuidos, pero usarlos añade interes a la cancion,
+                tension y movimiento.
+            </Text>
+            <Text theme={theme} variant="bodyLarge">
+                Como los acordes disminuidos son disonantes, se pueden resolver a cualquier lado mientras
+                sean resueltos aunque sea un poco, sobretodo si el acorde de resolucion esta cerca del acorde disminuido
+            </Text>
             <Text theme={theme} variant="titleLarge">¿Que rayos es maj7, 7♭5 y 7?</Text>
             <Text theme={theme} variant="bodyLarge">Maj7 (acorde mayor séptima)</Text>
             <Text theme={theme} variant="bodyLarge">

@@ -1,18 +1,19 @@
 import { Link, useNavigation, Redirect } from "expo-router";
 import { StyleSheet, View, ScrollView } from 'react-native';
 import { useTheme, Text, List, TouchableRipple, Appbar } from 'react-native-paper';
+import { MusicBuddyThemeContext } from '../MusicBuddyThemeContext';
+import React, { useContext } from 'react';
 
 // https://www.youtube.com/watch?v=_yw85rAb6cw
 export default function Home() {
     const theme = useTheme();
 
+    const { toggleTheme } = useContext(MusicBuddyThemeContext);
+
     const styles = StyleSheet.create({
         container: {
-            // flex: 1,
             backgroundColor: theme.colors.background,
             padding: 10
-            // alignItems: 'center',
-            // justifyContent: 'center',
         },
     });
 
@@ -20,7 +21,7 @@ export default function Home() {
         <View style={{ flex: 1 }}>
             <Appbar.Header>
                 <Appbar.Content title="MusicBuddy" titleStyle={{ fontWeight: "bold" }} />
-                <Appbar.Action icon="theme-light-dark" />
+                <Appbar.Action icon="theme-light-dark" onPress={toggleTheme} />
             </Appbar.Header>
             <ScrollView contentContainerStyle={styles.container}>
                 <List.Section>
