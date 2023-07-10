@@ -90,7 +90,7 @@ export default function App() {
                 </Text>
                 <View style={styles.scalesContainer}>
                     <View style={{ width: 100 }}>
-                        <Text>Major Scale (Jonico)</Text>
+                        <Text>Major (Jonico)</Text>
                         {selectedScaleObj?.major.map((interval, index) => (
                             <View key={index} style={styles.row}>
                                 <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
@@ -102,7 +102,7 @@ export default function App() {
                             </View>
                         ))}</View>
                     <View style={{ width: 100 }}>
-                        <Text>Minor Scale (Eolico)</Text>
+                        <Text>Minor (Eolico)</Text>
                         {selectedScaleObj?.minor.map((interval, index) => (
                             <View key={index} style={styles.row}>
                                 <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>

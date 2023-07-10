@@ -5,7 +5,6 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function ModosGriegos() {
     const theme = useTheme();
-    // https://www.youtube.com/watch?v=_yw85rAb6cw
     const styles = StyleSheet.create({
         container: {
             backgroundColor: theme.colors.background,
@@ -49,7 +48,10 @@ export default function ModosGriegos() {
                 <Text theme={theme}>Mayor</Text>
                 <Text theme={theme}>Lidio</Text>
             </View>
-            <Text theme={theme} variant="titleLarge" >Jónica (mayor) - Feliz Estandard</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Jónica (mayor) - Feliz Estandard
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde mayor. Es equivalente a lo que
                 comunmente se llama la Escala Mayor.
@@ -58,42 +60,82 @@ export default function ModosGriegos() {
                 Esta escala utiliza mucho el acorde dominante con séptima menor (G - B- D - F#)
                 por ejemplo
             </Text>
-            <Text theme={theme} variant="titleLarge" >Dórico - Epico pero oscuro o triste</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Dórico - Epico pero oscuro o triste
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                I - II - III♭ - IV - V - VII - VII♭
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde menor. Lo que mas se aprovecha del Dórico
                 es la primera menor y la cuarta mayor. El tema de la fuerza de Star Wars esta en
                 Dórico. Funk comunmente esa este modo.
             </Text>
-            <Text theme={theme} variant="titleLarge" >Frigio</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Frigio
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
-                La triada principal es un acorde menor. Frigio es un poco mas oscuro que la escala menor 
+                I - II♭ - III♭ - IV - V - VII♭ - VII♭
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                La triada principal es un acorde menor. Frigio es un poco mas oscuro que la escala menor
                 lo que lo hace una opcion comun en metal, "Simphony of Destruction" usa este modo
             </Text>
-            <Text theme={theme} variant="titleLarge" >Lidio - Feliz y Mágico</Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                Al tener un semitono entre la tonica y el segundo grado, frigio tiene un sentimiento 
+                constante de tension. Es como si frigio es un resbalin que siempre cae en la tonica.
+            </Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Lidio - Feliz y Mágico
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                I - II - III - IV# - V - VII - VII
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde mayor. En banda sonora se usa el modo lidio
                 para dar una sensación de fascinacion y fantasia.
             </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
-                Por ejemplo el tema de Joda en Star Wars usa el modo Lidio. Ahi se muestra la magia 
-                y fantasia. Una progresion comun es I - II 
+                Por ejemplo el tema de Joda en Star Wars usa el modo Lidio. Ahi se muestra la magia
+                y fantasia. Una progresion comun es I - II
             </Text>
-            <Text theme={theme} variant="titleLarge" >Mixolidio - Feliz y Epico</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Mixolidio - Feliz y Epico
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                I - II - III - IV - V - VII - VII♭
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde mayor. Es un poco mas apagado que Jonico.
                 Al mismo tiempo tiene un sentido mas epico, porque el acorde de septima en Jónico
                 es de quita disminuida pero en modo mixolidio es equivalente a un acorde mayor
             </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
-                Como tiene un bemol, es un poco mas oscuro que mayor. Muchas veces se utiliza 
+                Como tiene un bemol, es un poco mas oscuro que mayor. Muchas veces se utiliza
                 en canciones de rock por esta caracteristica. "You really got me" usa Mixolidio
             </Text>
-            <Text theme={theme} variant="titleLarge" >Eolica (menor) - Triste y epico</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Eolica (menor) - Triste y epico
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                I - II - III♭ - IV - V - VII♭ - VII♭
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde menor. Es equivalente a lo que
                 comunmente se llama la Escala Menor o Menor natural.
             </Text>
-            <Text theme={theme} variant="titleLarge" >Locrio - Fuego y Dolor</Text>
+            <Text theme={theme} variant="titleLarge"
+                style={{ backgroundColor: theme.colors.onPrimary }}>
+                Locrio - Fuego y Dolor
+            </Text>
+            <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
+                I - II♭ - III♭ - IV - V♭ - VII♭ - VII♭
+            </Text>
             <Text theme={theme} variant="bodyLarge" style={styles.paragraph}>
                 La triada principal es un acorde menor con quinta disminuida. Es un modo
                 que no se utiliza mucho por ser muy disonante.
