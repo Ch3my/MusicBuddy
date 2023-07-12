@@ -7,7 +7,8 @@ interface Props {
     height: number;
     circles: CircleProps[];
     fretsCount: number,
-    strumStrings: string[]
+    strumStrings: string[],
+    diagramColor: string
 }
 
 interface CircleProps {
@@ -17,7 +18,7 @@ interface CircleProps {
     stringIndex: number;
 }
 
-const GridLines: React.FC<Props> = ({ width, height, circles, fretsCount, strumStrings }) => {
+const GridLines: React.FC<Props> = ({ width, height, circles, fretsCount, strumStrings, diagramColor }) => {
     const windowDimensions = Dimensions.get('window');
     const screenDimensions = Dimensions.get('screen');
     const radioCirculo = 15;
@@ -92,7 +93,9 @@ const GridLines: React.FC<Props> = ({ width, height, circles, fretsCount, strumS
         for (let [i, r] of strumStrings.entries()) {
             const marginLeft = ((width / 5) * i) - anchoCaracter;
             verticalLines.push(<Text key={`strum-${i}`}
-                style={{ marginLeft, top: -20, position: "absolute" }} >{r}</Text>);
+                style={{ marginLeft, top: -20, position: "absolute", color: diagramColor }}>
+                {r}
+            </Text>);
         }
         return verticalLines;
     }
@@ -107,13 +110,13 @@ const GridLines: React.FC<Props> = ({ width, height, circles, fretsCount, strumS
         horizontalLine: {
             width: '100%',
             height: 1,
-            backgroundColor: 'black',
+            backgroundColor: diagramColor,
         },
         verticalLine: {
             position: 'absolute',
             width: 1,
             height: '100%',
-            backgroundColor: 'black',
+            backgroundColor: diagramColor,
         },
         circle: {
             position: 'absolute',

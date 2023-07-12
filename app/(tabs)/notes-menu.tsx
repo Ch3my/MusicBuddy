@@ -61,9 +61,9 @@ export default function Home() {
                             left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
-                    <Link href="/notes/inversions-guitar">
+                    <Link href="/notes/inv-guitar-123">
                         <List.Item
-                            title="Inversiones acordes"
+                            title="Inversión Guitar cuerdas 1, 2, 3"
                             left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
