@@ -61,6 +61,12 @@ export default function Home() {
                             left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
+                    <Link href="/notes/inversions-guitar">
+                        <List.Item
+                            title="Inversiones acordes"
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
+                        />
+                    </Link>
                 </List.Section>
             </ScrollView>
         </View>
