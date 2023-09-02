@@ -26,6 +26,9 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.chemy.MusicBuddy"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
