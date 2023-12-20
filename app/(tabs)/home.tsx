@@ -67,7 +67,7 @@ export default function App() {
             </Portal>
             </View>
             <Appbar.Header>
-                <Appbar.Content title="MusicBuddy" titleStyle={{ fontWeight: "bold" }} />
+                <Appbar.Content title="Music Codex" titleStyle={{ fontWeight: "bold" }} />
                 <Appbar.Action icon="theme-light-dark" onPress={toggleTheme} />
             </Appbar.Header>
             <ScrollView contentContainerStyle={styles.container}>
