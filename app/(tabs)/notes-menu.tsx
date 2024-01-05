@@ -67,6 +67,12 @@ export default function Home() {
                             left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
                         />
                     </Link>
+                    <Link href="/notes/modos-cheat">
+                        <List.Item
+                            title="Escala modal to Major"
+                            left={() => <List.Icon color={theme.colors.primary} icon="file-document" />}
+                        />
+                    </Link>
                 </List.Section>
             </ScrollView>
         </View>
