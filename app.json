@@ -28,13 +28,7 @@
       "package": "com.chemy.MusicBuddy"
     },
     "plugins": [
-      "expo-router",
-      ["expo-build-properties",
-      {
-        "android": {
-          "compileSdkVersion": 33
-        }
-      }]
+      "expo-router"
     ]
   }
 }

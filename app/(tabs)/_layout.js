@@ -43,7 +43,7 @@ export default function Layout() {
                 tabBarActiveBackgroundColor: theme.colors.primaryContainer,
                 tabBarLabelStyle: { color: theme.colors.primary },
                 title: "Home",
-                tabBarIcon: () => <Ionicons name="md-home" size={24}
+                tabBarIcon: () => <Ionicons name="home" size={24}
                     color={theme.colors.primary} />
             }} />
             <Tabs.Screen name="notes-menu"
