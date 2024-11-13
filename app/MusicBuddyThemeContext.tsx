@@ -51,12 +51,6 @@ export const MusicBuddyThemeProvider: React.FC<MusicBuddyThemeProviderProps> = (
     setNavTheme(newThemeName == 'dark' ? DarkTheme : DefaultTheme);
   };
 
-  // useEffect(() => {
-  //   setThemeName(systemColorScheme === 'dark' ? 'dark' : 'light');
-  //   setPaperTheme(themeName === 'dark' ? MD3DarkTheme : MD3LightTheme); // Updated variable name
-  //   setNavTheme(themeName === 'dark' ? DarkTheme : DefaultTheme);
-  // }, [themeName]);
-
   return (
     <MusicBuddyThemeContext.Provider
       value={{ themeName, paperTheme, navTheme, toggleTheme }} // Updated variable name
@@ -65,3 +59,5 @@ export const MusicBuddyThemeProvider: React.FC<MusicBuddyThemeProviderProps> = (
     </MusicBuddyThemeContext.Provider>
   );
 };
+
+export default MusicBuddyThemeProvider;

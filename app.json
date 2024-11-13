@@ -5,6 +5,7 @@
     "scheme": "acme",
     "version": "1.0.0",
     "orientation": "portrait",
+    "newArchEnabled": true,
     "web": {
       "bundler": "metro",
       "favicon": "./assets/favicon.png"
