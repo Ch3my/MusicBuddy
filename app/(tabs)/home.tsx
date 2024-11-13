@@ -1,7 +1,6 @@
-import { StyleSheet, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, View, ScrollView, Image, Modal } from 'react-native';
 import {
-    useTheme, Text, Appbar,
-    Modal, Portal, IconButton
+    useTheme, Text, Appbar, IconButton
 } from 'react-native-paper';
 import { Picker } from '@react-native-picker/picker';
 import React, { useState, useContext } from 'react';
@@ -15,6 +14,10 @@ export default function App() {
     const selectedScaleObj = Scales.find((scale) => scale.name === selectedScale);
 
     const { toggleTheme } = useContext(MusicBuddyThemeContext);
+
+    const hideModal = () => {
+        setModalVisible(false)
+    }
 
     const handleScaleChange = (scale: React.SetStateAction<string>) => {
         setSelectedScale(scale);
@@ -49,22 +52,25 @@ export default function App() {
             flex: 1,
             backgroundColor: theme.colors.background
         },
-        modalContent: {
-            backgroundColor: theme.colors.surfaceVariant,
-        }
     });
 
     return (
         <View style={styles.canva}>
             <View style={styles.container}>
 
-            <Portal>
-                <Modal visible={modalVisible} onDismiss={() => setModalVisible(false)}
-                    contentContainerStyle={styles.modalContent}>
-                    <Image source={selectedScaleObj?.armaduraSrc}
-                        resizeMode='contain' style={{ width: "100%" }} />
+                <Modal visible={modalVisible} onRequestClose={hideModal}
+                    animationType="slide">
+                    <IconButton icon="close"
+                        iconColor={theme.colors.onPrimaryContainer}
+                        containerColor={theme.colors.primaryContainer}
+                        mode="contained"
+                        style={{ position: "absolute", right: 15, zIndex: 999 }}
+                        onPress={hideModal} />
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <Image source={selectedScaleObj?.armaduraSrc}
+                            resizeMode='contain' style={{ width: "100%" }} />
+                    </View>
                 </Modal>
-            </Portal>
             </View>
             <Appbar.Header>
                 <Appbar.Content title="Music Codex" titleStyle={{ fontWeight: "bold" }} />
