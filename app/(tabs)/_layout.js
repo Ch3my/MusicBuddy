@@ -13,7 +13,6 @@ import {
 } from "@react-navigation/native";
 
 import React, { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function Layout() {

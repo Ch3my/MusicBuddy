@@ -10,6 +10,7 @@ import {
 import React, { useState, useContext } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { MusicBuddyThemeProvider, MusicBuddyThemeContext } from './MusicBuddyThemeContext';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Se crea un Stack que renderiza Tabs
 // las cosas que esten fuera de Tabs se iran a un nuevo Stack
@@ -24,9 +25,11 @@ const StackLayout = () => {
         <ThemeProvider value={navTheme}>
             <PaperProvider theme={paperTheme}>
                 <StatusBar style={themeName == "dark" ? "light" : "dark"} />
-                <Stack>
-                    <Stack.Screen name="(tabs)" options={{ headerShown: false }}></Stack.Screen>
-                </Stack>
+                <SafeAreaView style={{ flex: 1 }}>
+                    <Stack>
+                        <Stack.Screen name="(tabs)" options={{ headerShown: false }}></Stack.Screen>
+                    </Stack>
+                </SafeAreaView>
             </PaperProvider>
         </ThemeProvider>
     )
