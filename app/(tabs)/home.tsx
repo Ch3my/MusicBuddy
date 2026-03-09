@@ -52,6 +52,12 @@ export default function App() {
             flex: 1,
             backgroundColor: theme.colors.background
         },
+        listNumber: {
+            width: 25,
+        },
+        listText: {
+            width: 90,
+        },
     });
 
     return (
@@ -77,57 +83,59 @@ export default function App() {
                 <Appbar.Action icon="theme-light-dark" onPress={toggleTheme} />
             </Appbar.Header>
             <ScrollView contentContainerStyle={styles.container}>
-                <View style={styles.scalesContainer}>
-                    <Picker
-                        selectedValue={selectedScale}
-                        onValueChange={handleScaleChange}
-                        style={styles.pickerStyle}>
-                        {Scales.map((scale) => (
-                            <Picker.Item key={scale.name} label={scale.name} value={scale.name} style={styles.pickerItem} />
-                        ))}
-                    </Picker>
-                    <IconButton onPress={() => setModalVisible(true)}
-                        icon="music-clef-treble" mode="outlined"
-                        theme={theme} style={{ marginLeft: 10 }}
-                    />
+                <View style={{ flexDirection: 'column', gap: 5, marginBottom: 10 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Picker
+                            selectedValue={selectedScale}
+                            onValueChange={handleScaleChange}
+                            style={styles.pickerStyle}>
+                            {Scales.map((scale) => (
+                                <Picker.Item key={scale.name} label={scale.name} value={scale.name} style={styles.pickerItem} />
+                            ))}
+                        </Picker>
+                        <IconButton onPress={() => setModalVisible(true)}
+                            icon="music-clef-treble" mode="outlined"
+                            theme={theme} style={{ marginLeft: 10 }}
+                        />
+                    </View>
+                    <Text theme={theme} style={{ width: 170, textAlign: 'center' }}>
+                        Relativa menor: {selectedScaleObj?.relativaMenor}
+                    </Text>
                 </View>
-                <Text theme={theme}>
-                    Relativa menor: {selectedScaleObj?.relativaMenor}
-                </Text>
                 <View style={styles.scalesContainer}>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>Major (Jonico)</Text>
                         {selectedScaleObj?.major.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.major[index]}
                                 </Text>
                             </View>
                         ))}</View>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>Minor (Eolico)</Text>
                         {selectedScaleObj?.minor.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.minor[index]}
                                 </Text>
                             </View>
                         ))}
                     </View>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>Frigio</Text>
                         {selectedScaleObj?.frigio.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.frigio[index]}
                                 </Text>
                             </View>
@@ -135,40 +143,40 @@ export default function App() {
                     </View>
                 </View>
                 <View style={styles.scalesContainer}>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>Lidio</Text>
                         {selectedScaleObj?.lidio.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.lidio[index]}
                                 </Text>
                             </View>
                         ))}
                     </View>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>MixoLidio</Text>
                         {selectedScaleObj?.mixolidio.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.mixolidio[index]}
                                 </Text>
                             </View>
                         ))}
                     </View>
-                    <View style={{ width: 100 }}>
+                    <View style={{ width: 115 }}>
                         <Text>Dórico</Text>
                         {selectedScaleObj?.dorian.map((interval, index) => (
                             <View key={index} style={styles.row}>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 20 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listNumber}>
                                     {index + 1}.
                                 </Text>
-                                <Text theme={theme} variant="titleLarge" style={{ width: 80 }}>
+                                <Text theme={theme} variant="titleLarge" style={styles.listText}>
                                     {interval + Harmonization.dorian[index]}
                                 </Text>
                             </View>
